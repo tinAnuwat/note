@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📝 Note App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 My Notes</h1>
+
+    <!-- ฟอร์มเพิ่ม/แก้ไข -->
+    <form id="noteForm" class="note-form">
+      <input type="hidden" id="noteId" />
+      <input
+        type="text"
+        id="title"
+        placeholder="หัวข้อโน้ต..."
+        required
+      />
+      <textarea
+        id="content"
+        placeholder="เนื้อหา..."
+        rows="4"
+      ></textarea>
+      <div class="form-actions">
+        <button type="submit" id="submitBtn">➕ เพิ่มโน้ต</button>
+        <button type="button" id="cancelBtn" class="hidden">ยกเลิก</button>
+      </div>
+    </form>
+
+    <!-- รายการโน้ต -->
+    <div id="notesList" class="notes-list"></div>
+    <p id="status" class="status"></p>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
